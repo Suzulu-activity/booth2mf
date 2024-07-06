@@ -402,7 +402,7 @@ function Copyright() {
     return (
         <div>
             <Typography variant="body2" color="text.secondary" align="center">
-                {'Copyright © Takeshi Mikami. All rights reserved.'}
+                {'Copyright © Takeshi Mikami and Yushi Suzuki. All rights reserved.'}
             </Typography>
         </div>
     );
