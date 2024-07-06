@@ -1,8 +1,9 @@
-# Booth2MF
+# Booth2MF.Mk2
 
-Booth売上管理CSV → MoneyForward仕訳CSV 作成ツール
+takemikamiさん製のツール「Booth売上管理CSV → MoneyForward仕訳CSV 作成ツール」をpixivFactoryを使った販売に対応させたツールです。
+尚、間違ってはないとは思いますが、仕訳の正確性等については保証しません。自己責任で利用してください。
 
-ツールのURL  
+オリジナルツールのURL  
 https://takemikami.github.io/booth2mf/
 
 ブログの紹介記事  
