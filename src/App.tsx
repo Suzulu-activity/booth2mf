@@ -78,7 +78,7 @@ const transformCsv = (rawData: any, settings: { [key: string]: any; }) => {
                 commission: parseInt(row['手数料']) * -1,
                 amount: parseInt(row['小計']) + parseInt(row['送料（自宅）']) + parseInt(row['送料（pixivFACTORY）']),
                 outsourcing_factory: parseInt(row['pixivFACTORY製造・配送費']) * -1,
-                carriage_storage: parseInt(row['送料（自宅）'])
+                carriage_storage: parseInt(row['あんしんBOOTHパック 配送費'])
             }
         } else {
             rowSales['amount'] += parseInt(row['小計'])
@@ -177,6 +177,35 @@ const transformCsv = (rawData: any, settings: { [key: string]: any; }) => {
                 cr_amount: '',
                 cr_tax: '',
                 remarks: 'pixivFACTORYでの製造及び配送 BOOTH注文番号: ' + row['no'],
+                note: '',
+                tag: '',
+                type: '',
+                adjust: '',
+                dt_create: now,
+                dt_update: now,
+            })
+        }
+        if (row['carriage_storage'] !== 0) {
+            idnum++;
+            journals.push({
+                id: idnum,
+                no: idx,
+                dt: row['dt'],
+                dr_sbj1: '配送費',
+                dr_sbj2: '',
+                dr_taxg: settings['taxCommission'],
+                dr_dept: '',
+                dr_sup: 'ピクシブ株式会社',
+                dr_amount: row['carriage_storage'],
+                dr_tax: '',
+                cr_sbj1: '',
+                cr_sbj2: '',
+                cr_taxg: '',
+                cr_dept: '',
+                cr_sup: '',
+                cr_amount: '',
+                cr_tax: '',
+                remarks: 'あんしんBOOTHパックでの配送 BOOTH注文番号: ' + row['no'],
                 note: '',
                 tag: '',
                 type: '',
