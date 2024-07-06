@@ -18,6 +18,7 @@
     "typescript": "latest"
   },
   "scripts": {
+    "deploy": "npm run build && gh-pages -d build -m \"Updates --skip-ci\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +36,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "/booth2mf/"
+  "homepage": "https://suzulu-activity.github.io/booth2mf/",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
 }
