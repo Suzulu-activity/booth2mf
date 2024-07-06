@@ -431,7 +431,7 @@ function Copyright() {
     return (
         <div>
             <Typography variant="body2" color="text.secondary" align="center">
-                {'Copyright © Takeshi Mikami and Yushi Suzuki. All rights reserved.'}
+                {'Copyright © Takeshi Mikami and Suzulu. All rights reserved.'}
             </Typography>
         </div>
     );
@@ -454,7 +454,19 @@ export default function App() {
                 </Typography>
                 <Typography sx={{ mt: 6, mb: 3 }} color="text.secondary">
                     「Booth売上管理CSV」から「MoneyForward仕訳インポートCSV」を作成するツールです。<br/>
-                    ※本ツールに関して、作者・著作権者および関連組織はなんら責任を負いません。自己責任でご利用ください。免税事業者・簡易課税制度を選択している事業者のみ利用可能です。
+                    Mikami Takeshiさんが制作・公開してくださっている<a href='https://takemikami.com/2022/03/04/BoothMoneyForward-2022.html'>「Booth売上管理CSV → MoneyForward仕訳CSVツール」</a>をフォークし、データ販売以外でも利用可能にしました。<br/>
+                    ※本ツールに関して、作者・著作権者および関連組織はなんら責任を負いません。自己責任でご利用ください。免税事業者・簡易課税制度を選択している事業者のみ利用可能です。<br/><br/>
+                </Typography>
+                <Typography>対応している販売タイプ</Typography>
+                <Typography  variant="caption" color="text.secondary">
+                    ・データ販売<br/>
+                    ・pixivFACTORY連携を利用した物販<br/>
+                    ・あんしんBOOTHパックを利用した自宅配送を使う物販<br/><br/>
+                </Typography>
+                <Typography>対応していない販売タイプ</Typography>
+                <Typography  variant="caption" color="text.secondary">
+                    ・pixiv倉庫<br/>
+                    尚、これについては今後も対応の予定はありません。<br/><br/>
                 </Typography>
                 <BoothToMF />
                 <Copyright />
