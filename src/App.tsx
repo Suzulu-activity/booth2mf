@@ -78,7 +78,7 @@ const transformCsv = (rawData: any, settings: { [key: string]: any; }) => {
                 commission: parseInt(row['手数料']) * -1,
                 amount: parseInt(row['小計']) + parseInt(row['送料（自宅）']) + parseInt(row['送料（pixivFACTORY）']),
                 outsourcing_factory: parseInt(row['pixivFACTORY製造・配送費']) * -1,
-                carriage_storage: parseInt(row['あんしんBOOTHパック 配送費'])
+                carriage_storage: parseInt(row['あんしんBOOTHパック 配送費']) * -1,
             }
         } else {
             rowSales['amount'] += parseInt(row['小計'])
